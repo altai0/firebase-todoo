@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+    <div class="container text-center mt-3">
+        <h1>Welcome</h1>
+        <p>Please login or register.</p>
+        <button onclick="goRegister()" class="btn btn-warning">Register</button>
+        <button onclick="goLogin()" class="btn btn-success">Log-in</button>
+    </div>
+    <div class="container mt-5 regForm" style="display: none;">
+        <h2>Register</h2>
+        <p id="cregForm" style="cursor: pointer;color:red;float: right;">X</p>
+        <form action="" method="POST" class="signup-form">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" autocomplete="OFF" id="email" placeholder="Please email entered" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="pass" placeholder="Please pass entered" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="container mt-5 logForm" style="display: none;">
+        <h2>Log-in</h2>
+        <p id="clogForm" style="cursor: pointer;color:red;float: right;">X</p>
+        <form action="" method="POST" class="login-form">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" autocomplete="OFF" id="logemail" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="logpass" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Log-in</button>
+        </form>
+    </div>
+    
+
+<script>
+    const regForm = document.querySelector(".regForm");
+    const logForm = document.querySelector(".logForm");
+    const goRegister = () => {
+        regForm.style.display = 'block';
+    };
+    const goLogin = () => {
+        logForm.style.display = 'block';
+    };
+    $("#cregForm").click(function(){
+        regForm.style.display = 'none';
+    })
+    $("#clogForm").click(function(){
+        logForm.style.display = 'none';
+    })
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script src="engine.js"></script> 
+</body>
+</html>
