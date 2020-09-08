@@ -1,12 +1,6 @@
 $(document).ready(function(){
     var firebaseConfig = {
-        apiKey: "AIzaSyD12buq5_DkBh-f72MlHjMhf0BRm3YVx78",
-        authDomain: "simple-form-d5845.firebaseapp.com",
-        databaseURL: "https://simple-form-d5845.firebaseio.com",
-        projectId: "simple-form-d5845",
-        storageBucket: "simple-form-d5845.appspot.com",
-        messagingSenderId: "556432062799",
-        appId: "1:556432062799:web:213d877116402bb4ebad3a"
+        //YOUR FIREBASE CONFIG 
       };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
